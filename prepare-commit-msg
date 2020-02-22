@@ -21,11 +21,15 @@
 # still be edited.  This is rarely a good idea.
 
 COMMIT_MSG_FILE=$1
+echo $COMMIT_MSG_FILE
 COMMIT_SOURCE=$2
+echo $COMMIT_SOURCE
 SHA1=$3
+echo $SHA1
 BRANCH_NAME=$(git rev-parse --symbolic-full-name HEAD)
+echo $BRANCH_NAME
 
-python prepare-commit-message.py
+python -m pdb prepare-commit-message.py
 
 #/usr/bin/perl -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/)' "$COMMIT_MSG_FILE"
 

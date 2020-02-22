@@ -1,6 +1,9 @@
-import os
-import sys
+print(1)
 
+import os
+print(2)
+import sys
+print(3)
 try:
     # get commit message file name
     commit_message_file_name = os.environ['COMMIT_MSG_FILE']
@@ -18,4 +21,5 @@ try:
     commit_message_file.write(data)
     commit_message_file.close()
 except KeyError:
+    print("Error!!!")
     sys.exit(1)
