@@ -29,7 +29,7 @@ echo $SHA1
 BRANCH_NAME=$(git rev-parse --symbolic-full-name HEAD)
 echo $BRANCH_NAME
 
-python -m pdb prepare-commit-message.py
+python prepare-commit-message.py
 
 #/usr/bin/perl -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/)' "$COMMIT_MSG_FILE"
 
